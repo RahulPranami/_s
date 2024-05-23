@@ -37,7 +37,7 @@
   },
   "scripts": {
     "watch": "node-sass assets/sass/ -o ./assets/styles/ --source-map true --output-style expanded --indent-type tab --indent-width 1 -w",
-    "compile:css": "node-sass assets/sass/ -o ./assets/styles/ && stylelint './assets/styles/*.css' --fix || true && stylelint './assets/styles/*.css' --fix",
+    "compile:css": "node-sass --output-style compressed assets/sass/ -o ./assets/styles/ && stylelint './assets/styles/*.css' --fix || true && stylelint './assets/styles/*.css' --fix",
     "compile:rtl": "rtlcss ./assets/styles/style.css ./assets/styles/style-rtl.css",
     "lint:scss": "wp-scripts lint-style 'assets/sass/**/*.scss'",
     "lint:js": "wp-scripts lint-js 'assets/scripts/*.js'",
